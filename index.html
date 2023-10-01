@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yalda Pirmoradian UX/UI.</title>
+    <link rel="stylesheet" href="Styling.css">
+    <script src="https://kit.fontawesome.com/5210b858f2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<!----header---->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/YaldaUX:UIDesign.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="flexContainer">
+        <img id="headshot" class="flexItem headshot" src="images/yalda.JPG">
+        <div class="header-text" class="flexItem">
+            <p>UX/UI Designer</p>
+            <h1>Hi, I am <span>Yalda</span>,a Sydney-based UX/ UI designer.<br> I specialize in providing innovative solutions for design challenges.</h1>
+            <button class="primary">View Projects</button>
+        </div>
+    </div>
+
+<!-----about----->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/yalda.JPG" alt="Picture">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>"I'm a UX/UI designer with a computer science and business administration background, holding a diploma from TAFE NSW. I also completed a rigorous UX/UI Bootcamp Certification from Monash University, specializing in human-centered design principles. 
+                    I create seamless, user-centric solutions by understanding user needs, goals, and pain points.
+                    Let's bring your vision to life!"</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/IOS apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2018 - 2023</span><br>Partnerships Coordinator at Studiosity</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>UX/UI Bottcamp Monash University</li>
+                            <li><span>2014 - 2016</span><br>Diploma of Business Administration at TAFE NSW</li>
+                            <li><span>2007</span><br>Diploma of Computer Science</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>    
+</div>
+<!-------skills----->
+<div id="skills">
+    <div class="grid-container">
+        <h1 class="sub-title">Skills</h1>
+        <div class="skills-list">
+            <div>
+                <i class="fa-sharp fa-solid fa-crop-simple"></i>
+                <h2>UX/UI Design</h2>
+                <p> Write some text here</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p> Write some text here</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>App Design</h2>
+                <p> Write some text here</p>
+                <a href="#">Learn more</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!-----Case Study ------>
+
+    <div id="case-study">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="project-list">
+
+                <div class="project">
+                    <img src="images/ABCListen.png">
+                    <div class= "layer">
+                        <h2>ABC Listen Website</h2>
+                        <p>Designing a Case Study to Enhance User Experience in Navigating and Discovering Desired Podcasts, Radio, and Music on ABC Listen through the Implementation of Intuitive Navigation Menu and Filter Options.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+
+                </div>
+                
+                <div class="project">
+                    <img src="images/AustralianCharityGuide.png">
+                    <div class= "layer">
+                        <h2>Australian Charity Guide</h2>
+                        <p>Conducting a Case Study on Enhancing Website User Experience through Navigation Menu Revamp: Creating a Streamlined and User-Friendly Browsing Experience with an Intuitive Home Page Design.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+        
+    
+
+
+<!----Footer---->
+
+<div class="footer">
+    <a href="#" class="in">Instagram</a>
+    <a href="#" class="Be">Behance</a>
+    <a href="#" class="Email">Email</a>
+    <a href="#" class="Resume">CV</a>
+</div>
+
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
